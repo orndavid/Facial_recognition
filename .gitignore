@@ -38,3 +38,6 @@ CMakeCache.txt
 
 # Skip executable
 PFace
+
+# Skip custom python file
+*.py
