@@ -25,6 +25,7 @@ class Detector{
 								int g,
 								int r);
 		void set_haar_file(std::string file_name);
+		std::vector<cv::Rect> detect_obj(cv::Mat &raw_input);
 
 	private:
 		std::string input_file;
@@ -32,3 +33,4 @@ class Detector{
 };// end of Detector 
 
 #endif
+

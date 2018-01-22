@@ -59,3 +59,15 @@ void Detector::haar_detect_set_color(cv::Mat raw_input, int r, int g, int b){
 		}
 	}
 }
+
+std::vector<cv::Rect> Detector::detect_obj(cv::Mat &raw_input){
+	// Return set of found vectors with rectangle type
+	std::vector<cv::Rect> found;
+	detect.detectMultiScale(raw_input, found,1.1, 2, 0 |
+				CASCADE_SCALE_IMAGE, 
+				cv::Size(50, 50));
+
+	if(found.size() > 0){
+		return found;
+	}
+}
